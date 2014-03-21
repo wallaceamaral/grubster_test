@@ -59,19 +59,29 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText4"
         android:layout_below="@+id/editText4"
-        android:layout_marginTop="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
         android:text="Salvar na Fila" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editText4"
+        android:layout_below="@+id/button1"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="41dp"
+        android:text="Histórico" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
         android:layout_alignLeft="@+id/editText4"
-        android:layout_marginLeft="29dp"
+        android:layout_marginLeft="18dp"
         android:text="Listar Fila" />
 
 </RelativeLayout>

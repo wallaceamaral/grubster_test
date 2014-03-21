@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity implements OnClickListener {
 
 	private EditText caixaNome, caixaPhone, caixaEmail, caixaQuantidade;
-	private Button btnSalvar, btnListagem;
+	private Button btnSalvar, btnListagem, btnHistorico;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,12 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		btnSalvar 	= (Button)findViewById(R.id.button1);
 		btnListagem = (Button)findViewById(R.id.button2);
+		btnHistorico = (Button)findViewById(R.id.button3);
+		
 		
 		btnListagem.setOnClickListener(this);
 		btnSalvar.setOnClickListener(this);
+		btnHistorico.setOnClickListener(this);
 
 	}
 
@@ -46,6 +49,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		if(v == btnListagem){
 			Intent intent = new Intent(this, ListagemActivity.class);
 			startActivity(intent);
+		}else if(v == btnHistorico){
+			Intent intent = new Intent(this, HistoricoActivity.class);
+			startActivity(intent);
+
 		}else{
 			//empacotando dados no Bean, e enviado ao BD
 			try{
