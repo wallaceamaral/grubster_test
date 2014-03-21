@@ -47,7 +47,7 @@ public class ReservaBD {
 	}
 	
 	public ArrayList<ReservaBean> listarReservasFila(){
-		Cursor cursor = banco.rawQuery("SELECT id,name,phone,email,quantity,status FROM Reserva WHERE status='FILA' ORDER BY name ", null );
+		Cursor cursor = banco.rawQuery("SELECT id,name,phone,email,quantity,status FROM Reserva WHERE status='FILA' ", null );
 		
 		ArrayList<ReservaBean> lista = new ArrayList<ReservaBean>();
 		
