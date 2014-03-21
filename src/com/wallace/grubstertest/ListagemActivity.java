@@ -31,7 +31,7 @@ public class ListagemActivity extends Activity implements OnItemClickListener {
 
 		//busco o banco 
 		banco = new ReservaBD(this);
-		conteudo = banco.listarReservas();
+		conteudo = banco.listarReservasFila();
 		adapter = new ReservaAdapter(this, conteudo);
 	
 		//passando o adapter com os dados para a lista
