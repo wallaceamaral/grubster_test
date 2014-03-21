@@ -47,7 +47,7 @@ public class HistoricoActivity extends Activity implements OnItemClickListener {
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-
+/*
 		//puxando os  dados do item clicado(o final permite que as innerclass possam acessar)
 		final ReservaBean reservaClidada = conteudo.get(arg2);
 		
@@ -94,7 +94,7 @@ public class HistoricoActivity extends Activity implements OnItemClickListener {
 		});
 		
 		alerta.show();
-		
+		*/
 	}
 
 
