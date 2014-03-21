@@ -70,6 +70,34 @@ public class ReservaBD {
 		return lista;
 	}
 	
+	public ArrayList<ReservaBean> listarHistorico(){
+		Cursor cursor = banco.rawQuery("SELECT id,name,phone,email,quantity,status FROM Reserva ", null );
+		
+		ArrayList<ReservaBean> lista = new ArrayList<ReservaBean>();
+		
+		//percorro cada item da consulta
+		while (cursor.moveToNext()){
+			ReservaBean reserva = new ReservaBean();
+			
+			//colocando os dados de cada linha do banco de dados para o bean
+			reserva.id = cursor.getInt(0);
+			reserva.name 	 = cursor.getString(1);
+			reserva.phone 	 = cursor.getString(2);
+			reserva.email 	 = cursor.getString(3);
+			reserva.quantity = cursor.getInt(4);
+			reserva.status 	 = cursor.getString(5);
+			
+			lista.add(reserva);
+		}
+		cursor.close();
+		
+		return lista;
+	}
+	
+	
+	
+	
+	
 	public boolean atualizarReserva(ReservaBean reserva){
 		boolean sucesso = false;
 		
