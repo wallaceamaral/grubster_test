@@ -26,6 +26,10 @@
             android:name="com.wallace.grubstertest.ListagemActivity"
             android:label="@string/title_activity_listagem" >
         </activity>
+        <activity
+            android:name="com.wallace.grubstertest.HistoricoActivity"
+            android:label="@string/title_activity_listagem" >
+        </activity>
     </application>
 
 </manifest>
